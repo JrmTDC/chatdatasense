@@ -1,1 +1,84 @@
-﻿
+﻿.css_chat-open {
+    border-radius: 28px;
+    background-color: #3866FB;
+    box-shadow: 0 4px 24px rgba(2, 6, 16, 0.2);
+}
+
+.css_header-bg {
+    background: #3866FB;
+    border-radius: 30px 30px 0 0;
+}
+
+.css_home {
+    background: #FFF;
+}
+
+.css_header-logo {
+    color: #FFF;
+    font-family: NeuzeitGro;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: normal;
+    margin: 10px;
+}
+.css_header-logo2 {
+    color: #FFF;
+    font-family: NeuzeitGro;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: normal;
+    margin: 10px;
+    display: flex;
+}
+.css_chat-container {
+    color: #FFF;
+    margin: 5px 43px;
+    font-size: 15px;
+}
+
+.css_chat-container-st {
+    font-size: 36px;
+    padding-bottom: 12px;
+}
+
+.hr {
+    border: 1px solid #E4E8EF;
+    margin: 10px;
+}
+
+.css_pbh {
+    color: #6E7A95;
+    font-size: 12px;
+}
+
+.css_but-pna {
+    color: #494949;
+    font-family: NeuzeitGro;
+    border-radius: 14px;
+    border: 1px solid #E4E8EF;
+    padding: 10px 25px;
+}
+
+.css_but-pnat {
+    font-family: NeuzeitGro;
+    text-align: left;
+    font-size: 15px;
+    color: #494949;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    line-height:normal;
+
+}
+
+.css_but-pnat small {
+    font-size: 12px;
+    color: #494949;
+}
+
+.css_iconstartchat {
+    padding-left: 40px;
+}
