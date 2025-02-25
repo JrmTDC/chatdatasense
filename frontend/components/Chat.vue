@@ -160,7 +160,7 @@ watch(isChatActive, (newVal) => {
 
      <!-- Chatbot -->
 
-     <div v-if="isOpen" v-auto-animate class="fixed bottom-6 right-6 shadow-lg rounded-lg transition-all border border-gray-200 flex flex-col" :class="isMobile ? 'w-full h-full top-0 left-0' : 'w-96 h-[88vh]'">
+     <div v-if="isOpen" v-auto-animate class="hhcss_chat fixed bottom-6 right-6 shadow-lg rounded-lg transition-all border border-gray-200 flex flex-col" :class="isMobile ? 'w-full h-full top-0 left-0' : 'w-96 h-[88vh]'">
 
           <!-- Header -->
           <div class="css_header-bg">
@@ -207,35 +207,48 @@ watch(isChatActive, (newVal) => {
               <p>Obtenez des réponses rapides et personnalisées en un instant !</p>
             </div>
           </div>
+       <div class="hhcss_headerWave">
+         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 372 15"><path d="M349.8 1.4C334.5.4 318.5 0 302 0h-2.5c-9.1 0-18.4.1-27.8.4-34.5 1-68.3 3-102.3 4.7-14 .5-28 1.2-41.5 1.6C84 7.7 41.6 5.3 0 2.2v8.4c41.6 3 84 5.3 128.2 4.1 13.5-.4 27.5-1.1 41.5-1.6 33.9-1.7 67.8-3.6 102.3-4.7 9.4-.3 18.7-.4 27.8-.4h2.5c16.5 0 32.4.4 47.8 1.4 8.4.3 15.6.7 22 1.2V2.2c-6.5-.5-13.8-.5-22.3-.8z" fill="#fff"></path></svg>
+       </div>
 
           <!-- Home (Accueil) -->
           <div v-if="!isChatActive" class=" css_home p-4 space-y-4">
 
                <!-- Questions suggérées -->
-                <div class="bg-gray-100 p-3 rounded-lg shadow-inner max-h-40 overflow-y-auto">
-                    <button v-for="(question, index) in suggestedQuestions" :key="index" @click="sendSuggestedMessage(question)" class="block w-full text-left p-2 bg-white rounded-md shadow-sm hover:bg-gray-200 transition">{{ question }}</button>
+                <div class="css_accueil p-3 max-h-50 overflow-y-auto">
+                       <div>
+                            <button v-for="(question, index) in suggestedQuestions" :key="index" @click="sendSuggestedMessage(question)" class="css_accueilbtn text-left p-3 hover:bg-gray-200 transition">{{ question }}
+
+                                  <div class="css_iconstartchat">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M7.5 6.175L8.675 5L13.675 10L8.675 15L7.5 13.825L11.3167 10L7.5 6.175Z" fill="#494949"/>
+                                        </svg>
+                                  </div>
+                            </button>
+                       </div>
+
                 </div>
 
                 <div class="css_but-pna">
 
                             <!-- Bouton Parlez à notre assistan -->
                             <button class="css_but-pnat" @click="isChatActive = true">
-                              <div>
-                                Parlez à notre assistant
-                                <br>
-                                <small>Obtenez des réponses rapides et personnalisées en un instant !</small>
-                              </div>
-                              <div class="css_iconstartchat" >
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
-                                  <path d="M4.82004 9.47833L3.34552 6.5293C2.2362 4.31066 1.68155 3.20135 2.1912 2.69169C2.70085 2.18204 3.81017 2.7367 6.0288 3.84601L15.7178 8.69056C17.2789 9.4711 18.0595 9.86138 18.0595 10.4794C18.0595 11.0974 17.2789 11.4877 15.7179 12.2683L6.02881 17.1128C3.81017 18.2221 2.70085 18.7768 2.1912 18.2671C1.68155 17.7575 2.2362 16.6482 3.34552 14.4295L4.82112 11.4783H10.5307C11.0829 11.4783 11.5307 11.0306 11.5307 10.4783C11.5307 9.92605 11.0829 9.47833 10.5307 9.47833H4.82004Z" fill="#3866FB"/>
-                                </svg>
-                              </div>
+                                 <div>
+                                      Parlez à notre assistant
+                                      <br>
+                                      <small>Obtenez des réponses rapides et personnalisées en un instant !</small>
+                                 </div>
+                                  <div class="css_iconstartchat">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                                          <path d="M4.82004 9.47833L3.34552 6.5293C2.2362 4.31066 1.68155 3.20135 2.1912 2.69169C2.70085 2.18204 3.81017 2.7367 6.0288 3.84601L15.7178 8.69056C17.2789 9.4711 18.0595 9.86138 18.0595 10.4794C18.0595 11.0974 17.2789 11.4877 15.7179 12.2683L6.02881 17.1128C3.81017 18.2221 2.70085 18.7768 2.1912 18.2671C1.68155 17.7575 2.2362 16.6482 3.34552 14.4295L4.82112 11.4783H10.5307C11.0829 11.4783 11.5307 11.0306 11.5307 10.4783C11.5307 9.92605 11.0829 9.47833 10.5307 9.47833H4.82004Z" fill="#3866FB"/>
+                                        </svg>
+                                  </div>
                             </button>
 
 
                 </div>
 
-                <!-- Powered by HelloHumans Agent -->
+                <!-- Powered by HelloHumans -->
                  <div class=" css_pbh text-center text-sm text-gray-500">Powered by HelloHumans</div>
 
                  <hr class="hr">
@@ -254,10 +267,13 @@ watch(isChatActive, (newVal) => {
 
           </div>
 
+
+
+
           <!-- Messages -->
           <div ref="chatContainer"  v-auto-animate v-if="isChatActive" class="flex-1 overflow-y-auto p-4 space-y-3 bg-gray-50">
-               <div v-for="(msg, index) in messages" :key="index" class="flex items-center"  :class="msg.sender === 'user' ? 'justify-end' : 'justify-start'">
-                    <p v-html="formatMessage(msg.text)" :class="msg.sender === 'user' ? 'bg-blue-500 text-white' : 'bg-white text-gray-800 border border-gray-200'" class="inline-block rounded-2xl px-4 py-3 shadow-lg max-w-xs leading-relaxed"></p>
+               <div v-for="(msg, index) in messages" :key="index" class="css_messages flex items-center"  :class=" msg.sender === 'user' ? 'justify-end' : 'justify-start'">
+                    <p v-html="formatMessage(msg.text)" :class="msg.sender === 'user' ? 'bg-blue-500 text-white' : 'bg-white text-gray-800 border border-gray-200'" class="inline-block rounded-2xl px-4 py-3  max-w-xs leading-relaxed"></p>
                </div>
                <div v-if="isLoading" class="text-left animate-pulse">
                     <p class="bg-gray-300 text-gray-700 inline-block rounded-lg px-3 py-2 my-1 max-w-xs">Chatbot est en train d'écrire...</p>
@@ -266,7 +282,7 @@ watch(isChatActive, (newVal) => {
 
           <div v-if="isChatActive">
                <!-- Ligne de séparation -->
-               <div class="border-t border-gray-300"></div>
+               <div class="border-t border-gray-80"></div>
 
                <!-- Saisie utilisateur -->
                <div class="p-4 bg-white flex items-center">

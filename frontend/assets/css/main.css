@@ -4,6 +4,25 @@
     box-shadow: 0 4px 24px rgba(2, 6, 16, 0.2);
 }
 
+.hhcss_chat{
+    max-height: calc(100% - 47px);
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+}
+.hhcss_chat{
+    width: 372px;
+    position: absolute;
+    bottom: 26px;
+    border-radius: var(--radius-surface, 16px);
+    pointer-events: auto;
+    box-shadow: rgba(0, 18, 46, 0.16) 0px 8px 18px 0px;
+    overflow: hidden;
+    z-index: 1;
+    right: 26px;
+    left: auto;
+}
+
 .css_header-bg {
     background: #3866FB;
     border-radius: 30px 30px 0 0;
@@ -32,8 +51,9 @@
 }
 .css_chat-container {
     color: #FFF;
-    margin: 5px 43px;
+    margin: 5px 43px 15px 43px;
     font-size: 15px;
+
 }
 
 .css_chat-container-st {
@@ -41,22 +61,73 @@
     padding-bottom: 12px;
 }
 
-.hr {
+.hhcss_headerWave{
+    position:relative;
+}
+.hhcss_headerWave svg{
+    height: 24px;
+    position: absolute;
+    width: calc(100% + 10px);
+    bottom: -12px;
+    left: -4px;
+}
+
+.css_accueil {
+    border: 2px solid #E4E8EF;
+    border-radius: 15px;
+    font-family: NeuzeitGro;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: normal;
+    margin: 20px;
+    padding: 10px;
+    max-height: 225px;
+}
+
+.css_accueil button{
+    border-bottom: 2px solid #E4E8EF;
+    width: 100%;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+.css_accueil button:last-child{
+    border-bottom: 0;
+}
+
+.css_accueil button:hover {
+    background: #F5F7FA;
+    border-radius: 4px;
+    margin-top: 1px;
+
+}
+
+.css_accueilbtn {
+    display: flex;
+    align-items: center;
+    line-height:normal;
+
+}
+
+.css_hr {
     border: 1px solid #E4E8EF;
-    margin: 10px;
+    margin: 20px;
 }
 
 .css_pbh {
     color: #6E7A95;
     font-size: 12px;
+    padding-top: 20px;
 }
 
 .css_but-pna {
     color: #494949;
     font-family: NeuzeitGro;
     border-radius: 14px;
-    border: 1px solid #E4E8EF;
-    padding: 10px 25px;
+    border: 2px solid #E4E8EF;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 15px;
 }
 
 .css_but-pnat {
@@ -65,13 +136,12 @@
     font-size: 15px;
     color: #494949;
     display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    align-content: center;
-    justify-content: center;
     align-items: center;
     line-height:normal;
-
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: auto;
+    width: 100%;
 }
 
 .css_but-pnat small {
@@ -80,5 +150,12 @@
 }
 
 .css_iconstartchat {
-    padding-left: 40px;
+    padding-left: 20px;
+    margin: auto;
+    margin-right: 0;
+}
+
+.css_messages {
+    border-radius: 50px;
+
 }
