@@ -177,48 +177,53 @@ watch(isChatActive, (newVal) => {
                               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="directional-icon"><path d="M16.6312 17.7375L14.8687 19.5L7.36865 12L14.8687 4.5L16.6312 6.2625L10.9062 12L16.6312 17.7375Z"></path></svg>
                             </button>
                       </div>
-                  <div class="css_header-logo2" v-if="isChatActive">
-                    <div><svg width="24" height="27" viewBox="0 0 24 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M19.83 0C17.61 0 15.8 1.8 15.8 4.03V12.5C14.22 13.98 11.7 13.88 10.69 13.76C10.6 13.75 10.53 13.84 10.56 13.92C10.82 14.6 11.96 16.74 15.8 17.52V22.3C15.8 24.52 17.6 26.33 19.83 26.33C22.06 26.33 23.86 24.53 23.86 22.3V4.03C23.86 1.81 22.06 0 19.83 0ZM4 12.38C3.99 12.28 4.09 12.21 4.18 12.26C4.72 12.54 6.29 13.28 8.06 13.4V4.03C8.06 1.81 6.26 0 4.03 0C1.8 0 0 1.8 0 4.03V22.31C0 24.53 1.8 26.34 4.03 26.34C6.26 26.34 8.06 24.54 8.06 22.31V17.18C4.76 16.23 4.12 13.24 4 12.38Z" fill="white"/>
-                    </svg>
-                    </div>
-                    <div>Bonjour ! 👋</div>
-                  </div>
-                     <div class="flex space-x-2">
+                      <div class="css_header-logo2" v-if="isChatActive">
+                              <div>
+                                     <svg width="24" height="27" viewBox="0 0 24 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                     <path d="M19.83 0C17.61 0 15.8 1.8 15.8 4.03V12.5C14.22 13.98 11.7 13.88 10.69 13.76C10.6 13.75 10.53 13.84 10.56 13.92C10.82 14.6 11.96 16.74 15.8 17.52V22.3C15.8 24.52 17.6 26.33 19.83 26.33C22.06 26.33 23.86 24.53 23.86 22.3V4.03C23.86 1.81 22.06 0 19.83 0ZM4 12.38C3.99 12.28 4.09 12.21 4.18 12.26C4.72 12.54 6.29 13.28 8.06 13.4V4.03C8.06 1.81 6.26 0 4.03 0C1.8 0 0 1.8 0 4.03V22.31C0 24.53 1.8 26.34 4.03 26.34C6.26 26.34 8.06 24.54 8.06  22.31V17.18C4.76 16.23 4.12 13.24 4 12.38Z" fill="white"/>
+                                     </svg>
+                              </div>
+                              <div>Bonjour ! 👋</div>
+                      </div>
+                      <div class="flex space-x-2">
                           <!-- Open options -->
-                          <button @click="toggleOptions" class="relative group p-2 rounded-full transition hover:bg-[#00245c29] testddd w-10 h-10 flex items-center justify-center">
-                               <span class="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-gray-700 text-white text-xs rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition">Open options</span>
+                              <button @click="toggleOptions" class="relative group p-2 rounded-full transition hover:bg-[#00245c29] testddd w-10 h-10 flex items-center justify-center">
+                                <span class="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-gray-700 text-white text-xs rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition">Open options</span>
                                <svg fill="white" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"> <path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"></path> </svg>
-                          </button>
+                              </button>
 
                           <!-- Minimize -->
-                          <button @click="toggleChat" class="relative group p-2 rounded-full transition hover:bg-[#00245c29] w-10 h-10 flex items-center justify-center">
-                               <span class="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-gray-700 text-white text-xs rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition">Minimize</span>
+                              <button @click="toggleChat" class="relative group p-2 rounded-full transition hover:bg-[#00245c29] w-10 h-10 flex items-center justify-center">
+                                <span class="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-gray-700 text-white text-xs rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition">Minimize</span>
                                <svg fill="#fff" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"> <path d="M17.7375 7.36914L19.5 9.13164L12 16.6316L4.5 9.13164L6.2625 7.36914L12 13.0941L17.7375 7.36914Z"></path> </svg>
-                          </button>
-                     </div>
+                              </button>
+                      </div>
                 </div>
+
                  <!-- Message de bienvenue -->
                  <div class="css_chat-container" v-if="!isChatActive">
-                   <p class="css_chat-container-st">Bonjour ! 👋</p>
-                   <p>Bienvenue sur le site de l'Office de Tourisme, Avez vous besoin d’aider ?</p>
+                       <p class="css_chat-container-st">Bonjour ! 👋</p>
+                       <p>Bienvenue sur le site de l'Office de Tourisme, Avez vous besoin d’aider ?</p>
                  </div>
-            <div class="css_chat-container" v-if="isChatActive">
-              <p>Obtenez des réponses rapides et personnalisées en un instant !</p>
-            </div>
+                 <div class="css_chat-container" v-if="isChatActive">
+                       <p>Obtenez des réponses rapides et personnalisées en un instant !</p>
+                 </div>
           </div>
-       <div class="hhcss_headerWave">
-         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 372 15"><path d="M349.8 1.4C334.5.4 318.5 0 302 0h-2.5c-9.1 0-18.4.1-27.8.4-34.5 1-68.3 3-102.3 4.7-14 .5-28 1.2-41.5 1.6C84 7.7 41.6 5.3 0 2.2v8.4c41.6 3 84 5.3 128.2 4.1 13.5-.4 27.5-1.1 41.5-1.6 33.9-1.7 67.8-3.6 102.3-4.7 9.4-.3 18.7-.4 27.8-.4h2.5c16.5 0 32.4.4 47.8 1.4 8.4.3 15.6.7 22 1.2V2.2c-6.5-.5-13.8-.5-22.3-.8z" fill="#fff"></path></svg>
-       </div>
+
+           <div class="hhcss_headerWave">
+                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 372 15">
+                      <path d="M349.8 1.4C334.5.4 318.5 0 302 0h-2.5c-9.1 0-18.4.1-27.8.4-34.5 1-68.3 3-102.3 4.7-14 .5-28 1.2-41.5 1.6C84 7.7 41.6 5.3 0 2.2v8.4c41.6 3 84 5.3 128.2 4.1 13.5-.4 27.5-1.1 41.5-1.6 33.9-1.7 67.8-3.6 102.3-4.7 9.4-.3 18.7-.4 27.8-.4h2.5c16.5 0 32.4.4 47.8 1.4 8.4.3 15.6.7 22 1.2V2.2c-6.5-.5-13.8-.5-22.3-.8z" fill="#fff">
+                      </path>
+                 </svg>
+           </div>
 
           <!-- Home (Accueil) -->
-          <div v-if="!isChatActive" class=" css_home p-4 space-y-4">
+           <div v-if="!isChatActive" class=" css_home p-4 space-y-4">
 
                <!-- Questions suggérées -->
                 <div class="css_accueil p-3 max-h-50 overflow-y-auto">
                        <div>
                             <button v-for="(question, index) in suggestedQuestions" :key="index" @click="sendSuggestedMessage(question)" class="css_accueilbtn text-left p-3 hover:bg-gray-200 transition">{{ question }}
-
                                   <div class="css_iconstartchat">
                                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                           <path d="M7.5 6.175L8.675 5L13.675 10L8.675 15L7.5 13.825L11.3167 10L7.5 6.175Z" fill="#494949"/>
@@ -232,20 +237,18 @@ watch(isChatActive, (newVal) => {
                 <div class="css_but-pna">
 
                             <!-- Bouton Parlez à notre assistan -->
-                            <button class="css_but-pnat" @click="isChatActive = true">
-                                 <div>
-                                      Parlez à notre assistant
-                                      <br>
-                                      <small>Obtenez des réponses rapides et personnalisées en un instant !</small>
-                                 </div>
-                                  <div class="css_iconstartchat">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
-                                          <path d="M4.82004 9.47833L3.34552 6.5293C2.2362 4.31066 1.68155 3.20135 2.1912 2.69169C2.70085 2.18204 3.81017 2.7367 6.0288 3.84601L15.7178 8.69056C17.2789 9.4711 18.0595 9.86138 18.0595 10.4794C18.0595 11.0974 17.2789 11.4877 15.7179 12.2683L6.02881 17.1128C3.81017 18.2221 2.70085 18.7768 2.1912 18.2671C1.68155 17.7575 2.2362 16.6482 3.34552 14.4295L4.82112 11.4783H10.5307C11.0829 11.4783 11.5307 11.0306 11.5307 10.4783C11.5307 9.92605 11.0829 9.47833 10.5307 9.47833H4.82004Z" fill="#3866FB"/>
-                                        </svg>
-                                  </div>
-                            </button>
-
-
+                      <button class="css_but-pnat" @click="isChatActive = true">
+                             <div>
+                                    Parlez à notre assistant
+                                    <br>
+                                    <small>Obtenez des réponses rapides et personnalisées en un instant !</small>
+                             </div>
+                             <div class="css_iconstartchat">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                                      <path d="M4.82004 9.47833L3.34552 6.5293C2.2362 4.31066 1.68155 3.20135 2.1912 2.69169C2.70085 2.18204 3.81017 2.7367 6.0288 3.84601L15.7178 8.69056C17.2789 9.4711 18.0595 9.86138 18.0595 10.4794C18.0595 11.0974 17.2789 11.4877 15.7179 12.2683L6.02881 17.1128C3.81017 18.2221 2.70085 18.7768 2.1912 18.2671C1.68155 17.7575 2.2362 16.6482 3.34552 14.4295L4.82112 11.4783H10.5307C11.0829 11.4783 11.5307 11.0306 11.5307 10.4783C11.5307 9.92605 11.0829 9.47833 10.5307 9.47833H4.82004Z" fill="#3866FB"/>
+                                    </svg>
+                             </div>
+                      </button>
                 </div>
 
                 <!-- Powered by HelloHumans -->
@@ -256,18 +259,14 @@ watch(isChatActive, (newVal) => {
                <!-- Navigation en bas -->
                 <div class="flex bg-white">
                       <!-- Home -->
-                      <button @click="isChatActive = false"
-                              class="flex-1 flex flex-col items-center justify-center"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"> <g> <path d="M4.66663 24.5V10.5L14 3.5L23.3333 10.5V24.5H16.3333V16.3333H11.6666V24.5H4.66663Z" fill="#0566ff"></path> </g> </svg><span class="text-sm text-gray-700">Home</span>
+                      <button @click="isChatActive = false" class="flex-1 flex flex-col items-center justify-center"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"> <g> <path d="M4.66663 24.5V10.5L14 3.5L23.3333 10.5V24.5H16.3333V16.3333H11.6666V24.5H4.66663Z" fill="#0566ff"></path> </g> </svg><span class="text-sm text-gray-700">Home</span>
                       </button>
 
                       <!-- Chat -->
                       <button @click="isChatActive = true" class="flex-1 flex flex-col items-center justify-center"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"> <g> <path d="M2.91663 23.9613V4.44205C2.91663 3.85269 3.12079 3.35384 3.52913 2.94551C3.93746 2.53717 4.43631 2.33301 5.02567 2.33301H22.9743C23.5636 2.33301 24.0625 2.53717 24.4708 2.94551C24.8791 3.35384 25.0833 3.85269 25.0833 4.44205V17.724C25.0833 18.3133 24.8791 18.8122 24.4708 19.2205C24.0625 19.6288 23.5636 19.833 22.9743 19.833H7.04488L2.91663 23.9613ZM6.29996 18.083H22.9743C23.0641 18.083 23.1463 18.0456 23.221 17.9707C23.2959 17.896 23.3333 17.8138 23.3333 17.724V4.44205C23.3333 4.35222 23.2959 4.26997 23.221 4.1953C23.1463 4.12044 23.0641 4.08301 22.9743 4.08301H5.02567C4.93583 4.08301 4.85358 4.12044 4.77892 4.1953C4.70406 4.26997 4.66663 4.35222 4.66663 4.44205V19.6985L6.29996 18.083Z" fill="#4C596B"></path> </g> </svg><span class="text-sm text-gray-700">Chat</span>
                       </button>
                 </div>
-
-          </div>
-
-
+           </div>
 
 
           <!-- Messages -->
